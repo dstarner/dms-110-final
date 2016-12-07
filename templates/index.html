@@ -1,35 +1,171 @@
-<!doctype html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Dan Starner | Zombie Survivor</title>
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
-    <script src="TemplateData/UnityProgress.js"></script>
-  </head>
-  <body class="template">
-    <div class="template-wrap clear">
-      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
-      <br>
-      <div class="logo"></div>
-      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-      <div class="title">Zombie Survivor</div>
-    </div>
-    <script type='text/javascript'>
-  var Module = {
-    TOTAL_MEMORY: 268435456,
-    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-    compatibilitycheck: null,
-    backgroundColor: "#222C36",
-    splashStyle: "Light",
-    dataUrl: "Release/platformer.data",
-    codeUrl: "Release/platformer.js",
-    asmUrl: "Release/platformer.asm.js",
-    memUrl: "Release/platformer.mem",
-  };
-</script>
-<script src="Release/UnityLoader.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-  </body>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Zombie Survivor</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/clean-blog.css') }}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{ url_for('static', filename='vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="background-color: black;">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#">Zombie Survivor</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="https://www.danstarner.me">Dan's Website</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('../static/img/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>
+                          No one is left. You are the only one. Food is scare. You must
+                           <span style="font-size: larger; font-family: 'Creepster' !important;">survive</span>.
+                        </h1>
+
+                        <span class="meta">Developed by <a href="https://www.danstarner.me">Daniel Starner</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article style="color: white;">
+        <div class="container" >
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                  <h2 class="section-heading"><a id="A_Lonely_Morning_0"></a>A Lonely Morning</h2>
+                      <p>Jeff woke up as he did any other morning. As a homeless man who lived under the sewers of Washington D.C., he jumped out of his sleeping bag as smoothly and quickly as a man of his age could. Looking into his broken mirror that was a mirage of old glass windows, trying to get his grey hair to stay down, he noticed that the city above was not as bustling as usual. He shrugged it off as maybe his partially deaf hearing finally went and he was just not hearing all the street noises above he figured with a grunt.</p>
+                      <p>He was on his last package of coffee mix and only had a few granola bars left. <em>“Crap.”</em> Jeff hated going out into the world. Living fifteen years as a hermit under one of the biggest cities in the world really makes you feel a certain way about people, and it wasn’t a positive way. He started his fire - <em>the smoke from manholes covers is not methane you know, but Jeff</em> - and put his coffee into his homemade pot of an old car hubcap. He packed his few belongings needed for a days journey and just wished that he could lay back down in his old bed at his house before he was kicked out for not paying rent.</p>
+                  <h2 class="section-heading"><a id="Not_Your_Average_Grocery_Store_Run_7"></a>Not Your Average Grocery Store Run</h2>
+                      <p>Pulling over his large green miner’s jacket, the only remmant that gave suspicion to his past as a coal miner in the backhills of Virginia, he starting walking down the great long sewer pipe towards the world above. He hated <em>“The Main Hallway”</em> as he called it, because the light shining down always hurt his eyes. Grumbling and swearing, he pulled the hood over his head, trying to hide what he thought was the light, but he noticed that the light down the sewer was not a bright as usual. <em>“What the hell? Those loons must be fighting each others.”</em> He always called the citydwellers <em>loons</em>, but he didn’t really know why. He was a avid bird watcher as a kid, but he never knew why <em>loon</em> was what stuck…</p>
+                  <h2 class="section-heading"><a id="First_Step_is_the_Easiest_12"></a>First Step is the Easiest</h2>
+                      <p><em>“What the actual…”</em> Jeff mutters to himself as he walks into the concrete basin that his sewer leads to. Looking up at the Washington D.C. skyline, he noticed the smoke and fire that seemed to cover the sky. <em>“No wonder why it was so quiet.”</em> He hears some screams in the distance…<em>Hm, guess I didn’t lose my hearing after all…</em> Climbing up the embankment to street level, he notices just how absurd the situation is. The city is destroyed, and he notices notices something crawling towards him…<em>What is that?!</em> <strong><em>A ZOMBIE?</em> What happend!?!</strong> Jeff quickly ran from his humble abode of a sewer system, giving him the most exercise the old man has had in the past 40 years. Running off into central park, we slows down, and realizes his must collect food  to survive still…</p>
+
+                  <div class="template-wrap clear">
+                        <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+                        <br>
+                        <div class="fullscreen"><img src="{{ url_for('static', filename='TemplateData/fullscreen.png') }}" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+                      </div>
+                      <script type='text/javascript'>
+                    var Module = {
+                      TOTAL_MEMORY: 268435456,
+                      errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+                      compatibilitycheck: null,
+                      backgroundColor: "#222C36",
+                      splashStyle: "Light",
+                      dataUrl: "static/Release/platformer.data",
+                      codeUrl: "static/Release/platformer.js",
+                      asmUrl: "static/Release/platformer.asm.js",
+                      memUrl: "static/Release/platformer.mem",
+                    };
+                  </script>
+                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                  <script src="{{ url_for('static', filename='Release/UnityLoader.js') }}"></script>
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://www.danstarner.me">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.github.com/dstarner15">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="{{ url_for('static', filename='js/jqBootstrapValidation.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/contact_me.js') }}"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
+
+</body>
+
 </html>
